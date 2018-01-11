@@ -37,9 +37,9 @@ Use the following command line:
 cat input.txt | python main.py
 ```
 
-To edit the news sources in the urls for top stories please edit the following highlighted in the url to the available news sources in the link [newsapi](https://newsapi.org/sources):
+To edit the news sources in the urls for top stories please edit the source below (e.g this case it is **techcrunch**) in the url to the available news sources in the link [newsapi](https://newsapi.org/sources):
 
-https://newsapi.org/v2/top-headlines?sources=**techcrunch**&apiKey=97c9e17e34af48ba9768758c481e45f3
+https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=97c9e17e34af48ba9768758c481e45f3
 
 
 ## Storing the info in a Postgresql database
