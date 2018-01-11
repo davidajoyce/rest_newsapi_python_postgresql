@@ -8,10 +8,10 @@ def is_URL_valid(URL):
 		urllib2.urlopen(URL)		
 		return True
 	except ValueError, ex:
-		sys.stderr.write("This URL is not valid")	
+		sys.stderr.write("This URL is not valid")		
 		return False
 	except urllib2.URLError, ex:
-		sys.stderr.write("This URL is not valid")
+		sys.stderr.write("This URL is not valid")		
 		return False
 
 
@@ -30,6 +30,8 @@ def create_url_info(url):
 		
 		info_tuple = create_tuple(json_dict['articles'][i])
 		list_art.append(info_tuple)
+
+	
 
 	
 
