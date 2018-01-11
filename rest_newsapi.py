@@ -1,6 +1,8 @@
 import urllib2
 import sys
 import requests
+import python_postgresql as pypsql
+
 
 def is_URL_valid(URL):
 
@@ -30,6 +32,13 @@ def create_url_info(url):
 		
 		info_tuple = create_tuple(json_dict['articles'][i])
 		list_art.append(info_tuple)
+
+	
+	#insert the info into a postgresql table collected from the response from urls
+	pypsql.insert_news_list(list_art)
+
+
+
 
 	
 

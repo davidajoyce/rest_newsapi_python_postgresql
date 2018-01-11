@@ -1,5 +1,6 @@
 import rest_newsapi as rnews
 import sys
+import python_postgresql as pypsql
 
 
 def main():

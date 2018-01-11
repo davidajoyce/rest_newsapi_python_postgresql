@@ -1,5 +1,5 @@
 import psycopg2
-ase connection closed.')
+
 
 
 def create_tables():
@@ -36,8 +36,27 @@ def create_tables():
         if conn is not None:
             conn.close()
 
-
-
+def insert_news_list(news_list):
+    """ insert multiple newsapi info from newsapi response  """
+    sql = "INSERT INTO news(news_source, news_title, news_url, news_description, news_publishedAt) VALUES(%s,%s,%s,%s,%s)"
+    conn = None
+    try:
+      
+        # connect to the PostgreSQL database
+        conn = psycopg2.connect(host="localhost",database="newsapi", user="postgres", password="postgres")
+        # create a new cursor
+        cur = conn.cursor()
+        # execute the INSERT statement
+        cur.executemany(sql,news_list)
+        # commit the changes to the database
+        conn.commit()
+        # close communication with the database
+        cur.close()
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+    finally:
+        if conn is not None:
+            conn.close()
  
 if __name__ == '__main__':
     	
