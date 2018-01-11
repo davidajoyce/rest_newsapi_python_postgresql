@@ -9,10 +9,9 @@ def main():
 	for line in input_file:
 		url = line.strip()
 		
+		#check if the url is valid before requesting info
 		if rnews.is_URL_valid(url):
 			rnews.create_url_info(url)
-
-			
 
 
 
