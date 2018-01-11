@@ -1,0 +1,2 @@
+https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=97c9e17e34af48ba9768758c481e45f3
+https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=97c9e17e34af48ba9768758c481e45f3

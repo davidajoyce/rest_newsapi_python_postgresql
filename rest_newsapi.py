@@ -21,7 +21,7 @@ def create_tuple(article):
 	return tup
 
 def create_url_info(url):
-
+	
 	response = requests.get(url)
 	json_dict = response.json()
 	list_art = []
